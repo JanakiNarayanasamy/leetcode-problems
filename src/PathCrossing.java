@@ -11,11 +11,11 @@ public class PathCrossing {
         HashSet<String> points = new HashSet<>();
         points.add("0_0");
         for (int i =0; i< path.length();i++){
-            switch (path.charAt(i)){
-                case 'N' : count1++; break;
-                case 'S' : count1--; break;
-                case 'W' : count--; break;
-                case 'E' : count++; break;
+            switch (path.charAt(i)) {
+                case 'N' -> count1++;
+                case 'S' -> count1--;
+                case 'W' -> count--;
+                case 'E' -> count++;
             }
 
             //string builder performs faster than string ,because string has to create new objects in heap memory while concatenating
