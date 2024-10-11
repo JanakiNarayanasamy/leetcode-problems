@@ -16,6 +16,7 @@ public class FindNumberWithEvenDigits {
     }
 
     public static int check(int i){
+        System.out.println(Math.log10(i));
         return (int) (Math.log10(i)+1);
     }
 }
