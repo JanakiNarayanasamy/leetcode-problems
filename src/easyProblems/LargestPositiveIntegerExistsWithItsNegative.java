@@ -13,7 +13,7 @@ public class LargestPositiveIntegerExistsWithItsNegative {
         int val = -1;
         Set<Integer> set = new HashSet<>();
         for (int num : nums){
-            if(num > 0 && set.contains(-num)){
+            if(set.contains(-num)){
                 val = Math.max(val, Math.abs(num));
             }
             set.add(num);
