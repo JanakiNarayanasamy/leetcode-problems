@@ -22,9 +22,6 @@ public class ThirdMaximumNumber {
                 third = nums[i];
             }
         }
-        System.out.println(first);
-        System.out.println(second);
-        System.out.println(third);
         if(third == Long.MIN_VALUE ){
             return (int) first;
         }
