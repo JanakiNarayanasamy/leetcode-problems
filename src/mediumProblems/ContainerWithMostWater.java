@@ -1,3 +1,5 @@
+package mediumProblems;
+
 public class ContainerWithMostWater {
     public static void main(String[] args) {
         int[] height = {1,8,6,2,5,4,8,3,7};
@@ -14,22 +16,15 @@ public class ContainerWithMostWater {
     }
 
     public static int maxArea1(int[] height) {
-        int max = 0;
-        int left = 0;
-        int right = height.length - 1;
-
-        while (left < right) {
-            int h = Math.min(height[left], height[right]);
-            int w = right - left;
-            max = Math.max(max, h * w);
-
-            if (height[left] < height[right]) {
-                left++;
-            } else {
-                right--;
-            }
+        int area=0;int left=0;
+        int right=height.length-1;
+        while(left<right){
+            int h=Math.min(height[left],height[right]);
+            int water=(right-left)*h;
+            area=Math.max(area,water);
+            while(left<right && height[left]<=h) left++;
+            while(left<right && height[right]<=h) right--;
         }
-
-        return max;
+        return area;
     }
 }
